@@ -1,0 +1,14 @@
+docs_list_title: Site Navigation
+docs:
+
+- title: Home
+  url: /
+
+- title: About
+  url: /about.html
+
+- title: Sales
+  url: /sales.html
+
+- title: Our Work
+  url: /gallery.html

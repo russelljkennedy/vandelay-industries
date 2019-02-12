@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{ page.title }}</title>
+  <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Karla" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+  <body>
+      <!-- Wrapper -->
+      <div class="vl-wrap">
+        <!-- Main nav -->
+        <nav>
+          <div class="nav-links">
+            <ul>
+              {% for item in site.data.nav_links.docs %}
+                <li class="{% if item.url == page.url %}active{% endif %}"><a href="{{ item.url }}">{{ item.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </nav>
+        <!-- Main page content -->
+        <div class="vl-page">
+          {{ content }}
+        </div>
+        <!-- Footer -->
+        <footer>
+          <p>&copy; Art Vanderlay 2019.</p>
+        </footer>
+      </div>
+      <!-- End of wrapper -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
