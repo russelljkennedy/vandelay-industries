@@ -2,19 +2,21 @@
 layout: gallery
 title: Our work
 ---
-<section class="title-container">
-  <h1 class="title">{{ page.title }}</h1>
-</section>
-<!-- Gallery section -->
-<section class="gallery">
-      <div class="gallery-images">
-        {% for item in site.gallery_item %}
-        <div class="gallery-item">
-          <a href="{{ item.image_path }}" class="img-link" title="{{ item.caption }}">
-            <span class="gall-text">{{ item.title }}</span>
-            <img src="{{ item.thumb_path }}" alt="{{ item.title }}">
-          </a>
+<div class="vl-page">
+  <section class="title-container">
+    <h1 class="title">{{ page.title }}</h1>
+  </section>
+  <!-- Gallery section -->
+  <section class="gallery">
+        <div class="gallery-images">
+          {% for item in site.gallery_item %}
+          <div class="gallery-item">
+            <a href="{{ item.image_path }}" class="img-link" title="{{ item.caption }}">
+              <span class="gall-text">{{ item.title }}</span>
+              <img src="{{ item.thumb_path }}" alt="{{ item.title }}">
+            </a>
+          </div>
+          {% endfor %}
         </div>
-        {% endfor %}
-      </div>
-</section>
+  </section>
+</div>

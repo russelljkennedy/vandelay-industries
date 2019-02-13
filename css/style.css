@@ -7,6 +7,7 @@
   --black: #000;
   --white: #f4fef6;
   --orange: #e19724;
+  --red: #802828;
 }
 
 /* html elements */
@@ -97,9 +98,28 @@ nav {
   background-image: url(../img/01-architect.jpeg);
   background-size: cover;
   background-position: center;
-  min-height: 600px;
+  min-height: 800px;
   text-align: center;
   opacity: 0.8;
+}
+h1.hero-title, h2.hero-sub {
+  color: var(--red);
+  text-shadow: 1px 4px 1px var(--black);
+}
+h1.hero-title {
+  padding: 100px 0 0 0;
+}
+h2.hero-sub {
+  padding: 0 0 100px 0;
+}
+.hero .btn {
+  background: var(--black);
+  text-decoration: none;
+  padding: 15px;
+}
+.hero .btn:hover {
+  background: var(--orange);
+  color: var(--black);
 }
 /* Content section */
 .content {
