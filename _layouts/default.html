@@ -12,7 +12,7 @@
     {% endfor %}
   {% endif %}
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="/favicon.ico">
 </head>
   <body>
       <!-- Wrapper -->
@@ -21,15 +21,21 @@
         <nav>
           <div class="nav-links">
             <ul>
-              {% for item in site.data.nav_links.docs %}
-                <li class="{% if item.url == page.url %}active{% endif %}"><a href="{{ item.url }}">{{ item.title }}</a></li>
-              {% endfor %}
+              {% unless page.url contains '/blog/' %}
+                {% for item in site.data.nav_links.docs %}
+                  <li class="{% if item.url == page.url %}active{% endif %}"><a href="{{ item.url }}">{{ item.title }}</a></li>
+                {% endfor %}
+              {% else %}
+                <li class=""><a href="/">Home</a></li>
+                <li class=""><a href="/about.html">About</a></li>
+                <li class=""><a href="/sales.html">Sales</a></li>
+                <li class=""><a href="/gallery.html">Our Work</a></li>
+                <li class="active"><a href="/blog.html">Blog</a></li>
+              {% endunless %}
             </ul>
           </div>
         </nav>
-
           {{ content }}
-
         <!-- Footer -->
         <footer>
           <p>&copy; Art Vanderlay 2019.</p>

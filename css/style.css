@@ -59,14 +59,6 @@ a:hover {
 img {
   max-width: 100%;
 }
-footer {
-  text-align: center;
-  background: var(--black);
-  color: var(--background);
-  bottom: 0;
-  width: 100%;
-  line-height: 100px;
-}
 /* Navigation */
 nav {
   text-align: center;
@@ -201,4 +193,14 @@ h2.hero-sub {
 }
 .mfp-counter {
   font-weight: bold;
+}
+/* Footer section */
+footer {
+  text-align: center;
+  background: var(--black);
+  color: var(--background);
+  bottom: 0;
+  width: 100%;
+  line-height: 100px;
+  padding: 90px 0;
 }
