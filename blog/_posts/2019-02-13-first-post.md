@@ -1,6 +1,8 @@
 ---
 layout: post
-title: Welcome to the first blog post!
+title: Welcome to our blog! 
+listing_image: /img/blog/thumbs/01-cactus.jpg
+summary: Our first blog post. Find out what we're all about, who we are, and how we came to be.
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea laborum recusandae accusantium dolorem eaque amet quo ipsam magnam quia, pariatur soluta aliquid necessitatibus dolorum repellendus distinctio ipsa quae voluptatum deserunt ad tenetur magni repellat sapiente, eligendi odit, mollitia. Veritatis, aspernatur, repudiandae? Sunt delectus, asperiores dolorum. Necessitatibus corporis labore nostrum perspiciatis!
 

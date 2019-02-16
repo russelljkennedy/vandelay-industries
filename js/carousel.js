@@ -8,10 +8,7 @@ jQuery(document).ready(function($) {
       prevArrow: $('.prev'),
       nextArrow: $('.next'),
       autoplaySpeed: 3000,
-      variableWidth: true,
   });
-  // Set the slider items to the width of the screen
-  // $('.slider-image-*').width(window.innerWidth);
   $('a.felicity').click(function(e){
     e.preventDefault();
   });
