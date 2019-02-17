@@ -1,17 +1,21 @@
 ---
 layout: default
-title: Blog Posts
+title: Blog
 ---
+<!-- Title container -->
+<section class="title-container">
+  <h1 class="title">{{ page.title }}</h1>
+</section>
 <section class="blog">
   <div class="vl-page">
     <ul class="blog-listings">
        {% for post in site.posts %}
          <a href="{{ post.url }}">
-           <li class="blog-listing">
-          <img src="{{ post.listing_image }}" alt="">
-          {{ post.title }}
-          <p class="date"><strong>{{ post.date | date: "%d %B %Y" }}</strong></p>
-          <p class="listing">{{ post.summary }}</p>
+          <li class="blog-listing">
+            <img src="{{ post.listing_image }}" alt="">
+            {{ post.title }}
+            <p class="date"><i class="far fa-calendar-alt"></i> {{ post.date | date: "%d %B %Y" }}</p>
+            <p class="listing">{{ post.summary }}</p>
          </li>
          </a>
        {% endfor %}

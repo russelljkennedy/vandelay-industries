@@ -259,19 +259,12 @@ footer {
 }
 /* Blog */
 ul.blog-listings {
-  padding-top: 30px;
-  background: #d4d4d4;
-  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
   margin: 30px 0;
-  width: 300px;
-}
-ul.blog-listings:hover {
-  opacity: 0.8;
-}
-li.blog-listing {
-  list-style: none;
-  width: 300px;
-  text-align: center;
+  position: relative;
+  padding: 0;
 }
 ul.blog-listings a {
   color: var(--black);
@@ -281,9 +274,22 @@ ul.blog-listings a {
 ul.blog-listings a:hover {
   color: var(--headings);
 }
+li.blog-listing:hover {
+  opacity: 0.8;
+}
+li.blog-listing {
+  list-style: none;
+  display: block;
+  max-width: 300px;
+  background: #d4d4d4;
+  text-align: center;
+  padding: 30px 10px;
+}
 p.date {
   padding: 10px 0;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: lighter;
 }
 p.listing {
   text-align: justify;

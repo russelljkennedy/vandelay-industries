@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Welcome to our blog! 
+title: Welcome to our blog!
 listing_image: /img/blog/thumbs/01-cactus.jpg
 summary: Our first blog post. Find out what we're all about, who we are, and how we came to be.
 ---
