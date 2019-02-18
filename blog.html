@@ -8,9 +8,12 @@ title: Blog
 </section>
 <section class="blog">
   <div class="vl-page">
+    <div class="blog-grid">
     <ul class="blog-listings">
        {% for post in site.posts %}
-         <a href="{{ post.url }}">
+       <div class="item blog">
+         <div class="blog-content">
+         <a href="{{ post.url }}" class="blog-link">
           <li class="blog-listing">
             <img src="{{ post.listing_image }}" alt="">
             {{ post.title }}
@@ -18,7 +21,10 @@ title: Blog
             <p class="listing">{{ post.summary }}</p>
          </li>
          </a>
+         </div>
+         </div>
        {% endfor %}
     </ul>
+  </div>
   </div>
 </section>
