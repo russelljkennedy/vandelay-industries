@@ -197,6 +197,7 @@ h2.hero-sub {
 }
 .gallery-item img {
   display: block;
+  box-shadow: -2px 2px #bfccbf;
 }
 .gall-text {
   position: absolute;
@@ -260,8 +261,13 @@ footer {
 /* Blog */
 ul.blog-listings {
   display: grid;
+  align-self: start;
+  align-items: self-start;
+  /* grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); */
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
+  grid-auto-flow: dense;
+  grid-row-gap: 20px;
+  grid-auto-rows: 20px;
   margin: 30px 0;
   position: relative;
   padding: 0;
@@ -281,6 +287,7 @@ li.blog-listing {
   list-style: none;
   display: block;
   max-width: 300px;
+  height: auto;
   background: #d4d4d4;
   text-align: center;
   padding: 30px 10px;
