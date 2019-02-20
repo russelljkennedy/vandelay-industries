@@ -7,24 +7,19 @@ title: Blog
   <h1 class="title">{{ page.title }}</h1>
 </section>
 <section class="blog">
-  <div class="vl-page">
-    <div class="blog-grid">
-    <ul class="blog-listings">
-       {% for post in site.posts %}
-       <div class="item blog">
-         <div class="blog-content">
-         <a href="{{ post.url }}" class="blog-link">
-          <li class="blog-listing">
-            <img src="{{ post.listing_image }}" alt="">
-            {{ post.title }}
+    <!-- Blog listings container -->
+    <div id="blog-list">
+      {% for post in site.posts %}
+        <figure>
+          <a href="{{ post.url }}" title="{{ post.title }}">
+          <img src="{{ post.listing_image }}" alt="{{ post.image_caption }}">
+          <figcaption>
+            <h3>{{ post.title }}</h3>
             <p class="date"><i class="far fa-calendar-alt"></i> {{ post.date | date: "%d %B %Y" }}</p>
             <p class="listing">{{ post.summary }}</p>
-         </li>
-         </a>
-         </div>
-         </div>
-       {% endfor %}
-    </ul>
-  </div>
-  </div>
+          </figcaption>
+          </a>
+        </figure>
+      {% endfor %}
+    </div>
 </section>
