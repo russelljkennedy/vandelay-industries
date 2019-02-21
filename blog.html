@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Blog
+js:
+- /js/masonry.pkgd.min.js
 ---
 <!-- Title container -->
 <section class="title-container">
@@ -22,4 +24,20 @@ title: Blog
         </figure>
       {% endfor %}
     </div>
+
+    <div class="blog-masonry">
+      {% for post in site.posts %}
+        <div class="blog-post">
+          <a href="{{ post.url }}" title="{{ post.title }}">
+          <img src="{{ post.listing_image }}" alt="{{ post.image_caption }}">
+          <div class="blog-caption">
+            <h3>{{ post.title }}</h3>
+            <p class="date"><i class="far fa-calendar-alt"></i> {{ post.date | date: "%d %B %Y" }}</p>
+            <p class="listing">{{ post.summary }}</p>
+          </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+
 </section>
