@@ -260,46 +260,40 @@ h2.hero-sub {
   font-weight: bold;
 }
 /* Blog */
-#blog-list {
-  column-width: 320px;
-  column-gap: 15px;
-  width: 90%;
-  max-width: 1400px;
-  margin: 50px auto;
+.blog-grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat( auto-fill, minmax( 400px, 1fr ) );
+  /* grid-template-columns: repeat( 3, 1fr ); */
+  grid-auto-rows: auto;
+  max-width: 2000px;
+  padding: 15px 15px 40px 15px;
 }
-div#blog-list figure {
-  background: #d4d4d4;
-  border: 2px solid #c8c8c8;
-  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
-  margin: 0 2px 15px;
-  padding: 15px;
-  padding-bottom: 10px;
-  transition: opacity .4s ease-in-out;
-  display: inline-block;
-  column-break-inside: avoid;
+.blog-grid:hover .blog-post:not(:hover) {
+  opacity: 0.4;
 }
-div#blog-list figure img {
-  width: 100%;
-  height: auto;
-	border-bottom: 1px solid #b8adad;
-	padding-bottom: 15px;
-	margin-bottom: 5px;
-}
-div#blog-list figure h3 {
-  text-align: center;
-}
-div#blog-list figure figcaption {
-  line-height: 1.5;
-}
-div#blog-list figure a {
+.blog-listing a {
   text-decoration: none;
   color: var(--black);
 }
-div#blog-list figure a:hover {
-  color: var(--headings);
+.blog-post {
+  background: #d4d4d4;
+  border: 2px solid #c8c8c8;
+  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+  padding: 20px 15px;
+  height: 600px;
+  /* height: auto; */
+  transition: opacity .4s ease-in-out;
 }
-div#blog-list:hover figure:not(:hover) {
-	opacity: 0.4;
+.blog-post img {
+  width: 100%;
+  height: auto;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #afaaaa;
+}
+.blog-post h3 {
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 p.date {
   padding: 10px 0;
@@ -312,18 +306,11 @@ p.listing {
   font-size: 1.3rem;
   padding: 10px 0;
 }
-.blog-masonry {
-  max-width: 1300px;
-}
-.blog-post {
-  max-width: 320px;
-  background: #d4d4d4;
-  border: 2px solid #c8c8c8;
-  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
-  padding-bottom: 10px;
-  transition: opacity .4s ease-in-out;
-  display: inline-block;
-  column-break-inside: avoid;
-  position: relative;
-  float: none !important;
+
+
+/* Media queries */
+@media only screen and (max-width:856px) {
+  .blog-post {
+    height: auto;
+  }
 }

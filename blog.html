@@ -1,43 +1,30 @@
 ---
 layout: default
 title: Blog
-js:
-- /js/masonry.pkgd.min.js
 ---
 <!-- Title container -->
 <section class="title-container">
   <h1 class="title">{{ page.title }}</h1>
 </section>
 <section class="blog">
-    <!-- Blog listings container -->
-    <div id="blog-list">
+    <div class="blog-grid">
       {% for post in site.posts %}
-        <figure>
+        <div class="blog-listing">
           <a href="{{ post.url }}" title="{{ post.title }}">
-          <img src="{{ post.listing_image }}" alt="{{ post.image_caption }}">
-          <figcaption>
-            <h3>{{ post.title }}</h3>
-            <p class="date"><i class="far fa-calendar-alt"></i> {{ post.date | date: "%d %B %Y" }}</p>
-            <p class="listing">{{ post.summary }}</p>
-          </figcaption>
-          </a>
-        </figure>
-      {% endfor %}
-    </div>
-
-    <div class="blog-masonry">
-      {% for post in site.posts %}
-        <div class="blog-post">
-          <a href="{{ post.url }}" title="{{ post.title }}">
-          <img src="{{ post.listing_image }}" alt="{{ post.image_caption }}">
-          <div class="blog-caption">
-            <h3>{{ post.title }}</h3>
-            <p class="date"><i class="far fa-calendar-alt"></i> {{ post.date | date: "%d %B %Y" }}</p>
-            <p class="listing">{{ post.summary }}</p>
-          </div>
+            <div class="blog-post">
+              <img data-date="{{ post.date }}" class="blog-img" src="{{ post.listing_image }}" alt="{{ post.image_caption }}">
+              <div class="blog-caption">
+                <h3>{{ post.title }}</h3>
+                <p class="date"><i class="far fa-calendar-alt"></i> {{ post.date | date: "%d %B %Y" }}</p>
+                {% if post.summary %}
+                  <p class="listing">{{ post.summary | strip_html | strip_newlines | truncate: 200 }}</p>
+                {% else %}
+                  <p class="listing">{{ post.excerpt | strip_html | strip_newlines | truncate: 200 }} </p>
+                {% endif %}
+              </div>
+            </div>
           </a>
         </div>
       {% endfor %}
     </div>
-
 </section>
