@@ -101,6 +101,15 @@ nav {
 .nav-links li.active a {
   color: var(--orange);
 }
+/* Logo container */
+#logo-container {
+  display: none;
+}
+#logo-container h2 {
+  font-size: 3rem;
+  padding-left: 15px;
+  color: var(--orange);
+}
 /* Popout nav - invisible at first */
 #nav-container {
   display: none;
@@ -114,8 +123,8 @@ button.hamburger {
   top:0;
   right:0;
   line-height:30px;
-  padding:5px 15px 0px 15px;
-  color: var(--pink);
+  padding:5px 25px 0px 15px;
+  color: var(--orange);
   border:0;
   font-size:1.4em;
   font-weight:bold;
@@ -123,15 +132,15 @@ button.hamburger {
   outline:none;
   z-index:10000000000000;
   background-color: transparent;
-  height: 50px;
+  height: 75px;
 }
 .cross{
   background:none;
   position:absolute;
   top:10px;
   right:0;
-  padding:7px 15px 0px 15px;
-  color: var(--pink);
+  padding:7px 25px 0px 15px;
+  color: var(--orange);
   border:0;
   font-size:3em;
   line-height:65px;
@@ -140,7 +149,7 @@ button.hamburger {
   outline:none;
   z-index:10000000000000;
   background-color: transparent;
-  height: 50px;
+  height: 100px;
 }
 .pop-menu {
   display: none;
@@ -148,10 +157,11 @@ button.hamburger {
   font-weight:bold;
   font-size:0.8em;
   width:100%;
-  background:#f1f1f1;
+  background:#d4d4d4;
   position:absolute;
   text-align:center;
   font-size:12px;
+  border-bottom: #dddddd 1.5px solid;
 }
 .pop-menu ul {
   display: block;
@@ -162,9 +172,9 @@ button.hamburger {
 }
 .pop-menu li {
   display: block;
-  font-family: 'Sarabun', sans-serif;
+  font-family: 'Karla', Roboto, sans-serif;
   padding:15px 0 15px 0;
-  border-bottom:#dddddd 1px solid;
+  border:#dddddd 1px solid;
 }
 .pop-menu li:hover {
   display: block;
@@ -176,19 +186,27 @@ button.hamburger {
   display: block;
   text-decoration:none;
   margin: 0px;
-  color:#666;
+  color:var(--font);
+  font-size: 1.2rem;
+
 }
 .pop-menu ul li a:hover {
-  color: #666;
+  color: var(--font);
   text-decoration:none;
+}
+.pop-menu ul li.active {
+  background: #ffffff;
+}
+.pop-menu ul li.active a {
+  color: var(--orange);
 }
 .pop-menu a {
   text-decoration:none;
-  color:#666;
+  color:var(--font);
 }
 .pop-menu a:hover {
   text-decoration:none;
-  color:#666;
+  color:var(--font);
 }
 /* Front page hero section */
 .hero {
@@ -553,6 +571,23 @@ input[type="submit"]:hover {
   border-color: var(--orange);
 }
 /* Media queries */
+@media only screen and (max-width:1100px) {
+  h1.hero-title {
+    font-size: 4.8rem;
+  }
+  h2.hero-sub {
+    font-size: 3.5rem;
+  }
+}
+@media only screen and (max-width:999px) {
+  h1.hero-title {
+    font-size: 4rem;
+  }
+  h2.hero-sub {
+    font-size: 3rem;
+    padding: 0 30px 60px 30px;
+  }
+}
 @media only screen and (max-width:856px) {
   .blog-post {
     height: auto;
@@ -566,10 +601,16 @@ input[type="submit"]:hover {
   button.hamburger {
     display: block;
   }
+  .cross {
+    display: none;
+  }
   /* nav {
     height: 75px;
   } */
   .nav-links ul {
     display: none;
+  }
+  #logo-container {
+    display: block;
   }
 }
