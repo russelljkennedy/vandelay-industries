@@ -101,6 +101,95 @@ nav {
 .nav-links li.active a {
   color: var(--orange);
 }
+/* Popout nav - invisible at first */
+#nav-container {
+  display: none;
+}
+button.hamburger {
+ display: none;
+}
+.hamburger{
+  background:none;
+  position:absolute;
+  top:0;
+  right:0;
+  line-height:30px;
+  padding:5px 15px 0px 15px;
+  color: var(--pink);
+  border:0;
+  font-size:1.4em;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+  background-color: transparent;
+  height: 50px;
+}
+.cross{
+  background:none;
+  position:absolute;
+  top:10px;
+  right:0;
+  padding:7px 15px 0px 15px;
+  color: var(--pink);
+  border:0;
+  font-size:3em;
+  line-height:65px;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+  background-color: transparent;
+  height: 50px;
+}
+.pop-menu {
+  display: none;
+  z-index:1000000;
+  font-weight:bold;
+  font-size:0.8em;
+  width:100%;
+  background:#f1f1f1;
+  position:absolute;
+  text-align:center;
+  font-size:12px;
+}
+.pop-menu ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-image: none;
+}
+.pop-menu li {
+  display: block;
+  font-family: 'Sarabun', sans-serif;
+  padding:15px 0 15px 0;
+  border-bottom:#dddddd 1px solid;
+}
+.pop-menu li:hover {
+  display: block;
+  background:#ffffff;
+  padding:15px 0 15px 0;
+  border-bottom:#dddddd 1px solid;
+}
+.pop-menu ul li a {
+  display: block;
+  text-decoration:none;
+  margin: 0px;
+  color:#666;
+}
+.pop-menu ul li a:hover {
+  color: #666;
+  text-decoration:none;
+}
+.pop-menu a {
+  text-decoration:none;
+  color:#666;
+}
+.pop-menu a:hover {
+  text-decoration:none;
+  color:#666;
+}
 /* Front page hero section */
 .hero {
   background-image: url(../img/01-architect.jpeg);
@@ -467,5 +556,20 @@ input[type="submit"]:hover {
 @media only screen and (max-width:856px) {
   .blog-post {
     height: auto;
+  }
+}
+@media only screen and (max-width:750px) {
+  /* Make the popout nav visible */
+  #nav-container {
+    display: block;
+  }
+  button.hamburger {
+    display: block;
+  }
+  /* nav {
+    height: 75px;
+  } */
+  .nav-links ul {
+    display: none;
   }
 }

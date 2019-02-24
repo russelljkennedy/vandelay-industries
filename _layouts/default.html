@@ -20,6 +20,28 @@
       <div class="vl-wrap">
         <!-- Main nav -->
         <nav>
+          <!-- Container for popout nav -->
+          <div id="nav-container">
+            <button class="hamburger">&#9776;</button>
+            <button class="cross">&#735;</button>
+          </div>
+          <!-- Popout nav menu -->
+          <div class="pop-menu">
+            <ul>
+              {% unless page.url contains '/blog/' %}
+                {% for item in site.data.nav_links.docs %}
+                  <li class="{% if item.url == page.url %}active{% endif %}"><a href="{{ item.url }}">{{ item.title }}</a></li>
+                {% endfor %}
+              {% else %}
+                <li class=""><a href="/">Home</a></li>
+                <li class=""><a href="/about.html">About</a></li>
+                <li class=""><a href="/sales.html">Sales</a></li>
+                <li class=""><a href="/gallery.html">Our Work</a></li>
+                <li class="active"><a href="/blog.html">Blog</a></li>
+              {% endunless %}
+            </ul>
+          </div>
+          <!-- Nav links -->
           <div class="nav-links">
             <ul>
               {% unless page.url contains '/blog/' %}
