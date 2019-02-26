@@ -170,7 +170,7 @@ button.hamburger {
   outline:none;
   z-index:10000000000000;
   background-color: transparent;
-  height: 100px;
+  height: 75px;
 }
 .pop-menu {
   display: none;
