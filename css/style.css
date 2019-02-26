@@ -68,17 +68,18 @@ img {
 }
 .align-left {
   float: left;
-  max-width: 30%;
+  /* max-width: 30%; */
 }
 .align-right {
   float: right;
-  max-width: 30%;
+  /* max-width: 30%; */
 }
 figure {
   padding: 15px;
 }
 figure img {
-  display: block;
+  /* display: block; */
+  max-width: 400px;
 }
 figure figcaption {
   text-align: center;
@@ -180,7 +181,7 @@ button.hamburger {
   position:absolute;
   text-align:center;
   font-size:12px;
-  border-bottom: #dddddd 1.5px solid;
+  border-bottom: #938e8e 2px solid;
 }
 .pop-menu ul {
   display: block;
@@ -192,14 +193,14 @@ button.hamburger {
 .pop-menu li {
   display: block;
   font-family: 'Karla', Roboto, sans-serif;
-  padding:15px 0 15px 0;
+  padding: 0;
   border:#dddddd 1px solid;
 }
 .pop-menu li:hover {
   display: block;
   background:#ffffff;
-  padding:15px 0 15px 0;
-  border-bottom:#dddddd 1px solid;
+  padding: 0;
+  border:#dddddd 1px solid;
 }
 .pop-menu ul li a {
   display: block;
@@ -548,6 +549,7 @@ input[type="submit"]{
   font-size: 1.3rem;
   font-family: 'Karla', Roboto, sans-serif;
   width: 10%;
+  min-width: 100px;
   height: 35px;
   margin-top: 15px;
   letter-spacing: -1.2px;
@@ -579,9 +581,16 @@ input[type="submit"]:hover {
   h1 {
     font-size: 6rem;
   }
-  .align-left, .align-right {
-    max-width: 50%;
+  input#firstname,
+  input#lastname,
+  input#email,
+  textarea#message {
+    width: 90%;
+    min-width: 150px;
   }
+  /* .align-left, .align-right {
+    max-width: 50%;
+  } */
 }
 @media only screen and (max-width:856px) {
   .blog-post {
@@ -605,12 +614,22 @@ input[type="submit"]:hover {
   #logo-container {
     display: block;
   }
+  .vl-page {
+    margin: 0 10px;
+  }
   h1 {
     font-size: 5rem;
   }
-  .align-left, .align-right {
-    max-width: 100%;
+  .title-container {
+    padding: 20px 5px;
+  }
+  figure {
+    width: 100%;
+    text-align: center;
     padding: 15px 0;
+  }
+  figure img {
+    max-width: 100%;
   }
 }
 @media only screen and (max-width:650px) {
@@ -646,6 +665,9 @@ input[type="submit"]:hover {
     .next {
       right: 0;
     }
+    .blog-grid {
+      grid-template-columns: repeat( auto-fit, minmax( 300px, 1fr ) );
+    }
 }
 @media only screen and (max-width:400px) {
   h1.hero-title {
@@ -667,6 +689,12 @@ input[type="submit"]:hover {
   .next {
     right: -5px;
   }
+  h1.title {
+    font-size: 3rem;
+  }
+  .blog-grid {
+    padding: 15px 0;
+  }
 }
 @media only screen and (max-width:350px) {
   h1.hero-title {
@@ -677,9 +705,18 @@ input[type="submit"]:hover {
   #logo-container h2 {
     font-size: 1.2rem;
   }
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
 }
 @media only screen and (max-width:250px) {
   #logo-container {
     display: none;
+  }
+  .blog-post h3 {
+    font-size: 1.5rem;
+  }
+  p.date {
+    font-size: 1rem;
   }
 }
