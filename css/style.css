@@ -24,6 +24,9 @@ body {
   font-family: 'Karla', Roboto, sans-serif;
   font-size: 1.5em;
 }
+.home {
+  background: var(--black);
+}
 h1,h2,h3,h4 {
   font-family: 'Zilla Slab', serif;
   color: var(--headings);
@@ -273,7 +276,7 @@ h2.hero-sub {
   min-height: 800px;
   width: 100%;
   text-align: center;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .slider-image-1 {
   background-image: url(../img/slider/01-architect.jpeg);
@@ -684,12 +687,6 @@ input[type="submit"]:hover {
   .prev, .next {
     top: 245px;
   }
-  .prev {
-    left: -5px;
-  }
-  .next {
-    right: -5px;
-  }
   h1.title {
     font-size: 3rem;
   }
@@ -697,9 +694,24 @@ input[type="submit"]:hover {
     padding: 15px 0;
   }
 }
-@media only screen and (max-width:350px) {
+/* Medium mobile */
+@media only screen and (max-width:375px) {
+  [class*="slider-image-"]{
+    min-height: 350px;
+  }
   h1.hero-title {
     padding-top: 15px;
+  }
+  .prev, .next {
+    top: 185px;
+  }
+}
+@media only screen and (max-width:350px) {
+  h1.hero-title {
+    font-size: 2.1rem;
+  }
+  h2.hero-sub {
+    font-size: 1.7rem;
   }
 }
 @media only screen and (max-width:300px) {
@@ -719,5 +731,11 @@ input[type="submit"]:hover {
   }
   p.date {
     font-size: 1rem;
+  }
+  h1.hero-title {
+    padding-bottom: 120px;
+  }
+  h2.hero-sub {
+    display: none;
   }
 }
