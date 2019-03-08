@@ -1,0 +1,142 @@
+// Layout
+
+/* Navigation */
+nav {
+  text-align: center;
+  background: $header_col;
+  color: $background_col;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  line-height: 80px;
+}
+.nav-links ul {
+  display: grid;
+  list-style: none;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+  padding: 10px 0;
+  font-size: 2rem;
+  font-family: $body_font, Roboto, sans-serif;
+}
+.nav-links ul a {
+  text-decoration: none;
+}
+.nav-links li.active a {
+  color: $actions_col;
+}
+/* Logo container */
+#logo-container {
+  display: none;
+}
+#logo-container h2 {
+  font-size: 3rem;
+  padding-left: 15px;
+  color: $actions_col;
+}
+/* Popout nav - invisible at first */
+#nav-container {
+  display: none;
+}
+button.hamburger {
+ display: none;
+}
+.hamburger{
+  background:none;
+  position:absolute;
+  top:0;
+  right:0;
+  line-height:30px;
+  padding:5px 25px 0px 15px;
+  color: $actions_col;
+  border:0;
+  font-size:1.4em;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+  background-color: transparent;
+  height: 75px;
+}
+.cross{
+  background:none;
+  position:absolute;
+  top:10px;
+  right:0;
+  padding:7px 25px 0px 15px;
+  color: $actions_col;
+  border:0;
+  font-size:3em;
+  line-height:65px;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+  background-color: transparent;
+  height: 75px;
+}
+.pop-menu {
+  display: none;
+  z-index:1000000;
+  font-weight:bold;
+  font-size:0.8em;
+  width:100%;
+  background:#d4d4d4;
+  position:absolute;
+  text-align:center;
+  font-size:12px;
+  border-bottom: #938e8e 2px solid;
+}
+.pop-menu ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-image: none;
+}
+.pop-menu li {
+  display: block;
+  font-family: $body_font, Roboto, sans-serif;
+  padding: 0;
+  border:#dddddd 1px solid;
+}
+.pop-menu li:hover {
+  display: block;
+  background:#ffffff;
+  padding: 0;
+  border:#dddddd 1px solid;
+}
+.pop-menu ul li a {
+  display: block;
+  text-decoration:none;
+  margin: 0px;
+  color:$foreground_col;
+  font-size: 1.2rem;
+
+}
+.pop-menu ul li a:hover {
+  color: $foreground_col;
+  text-decoration:none;
+}
+.pop-menu ul li.active {
+  background: #ffffff;
+}
+.pop-menu ul li.active a {
+  color: $actions_col;
+}
+.pop-menu a {
+  text-decoration:none;
+  color:$foreground_col;
+}
+.pop-menu a:hover {
+  text-decoration:none;
+  color:$foreground_col;
+}
+// Content section
+.content {
+  background: #e7ebe9;
+  padding: 25px;
+  color: #6c6969;
+  margin-bottom: 25px;
+  box-shadow: -1px 1px 3px #010101;
+}

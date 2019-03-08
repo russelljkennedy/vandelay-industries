@@ -1,0 +1,86 @@
+/* Core html elements */
+* {
+  margin: 0;
+  padding: 0;
+  min-height: 0;
+  min-width: 0;
+}
+body {
+  background: $background_col;
+  color: $foreground_col;
+  font-family: $body_font, Roboto, sans-serif;
+  font-size: 1.5em;
+}
+h1,h2,h3,h4 {
+  font-family: $heading_font, serif;
+  color: $heading_col;
+}
+h1 {
+  font-size: 8rem;
+  text-shadow: 1px 2px 3px $header_col;
+}
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 2.5rem;
+}
+h1.title {
+  text-align: center;
+}
+h2.sub {
+  text-align: center;
+  font-weight: lighter;
+}
+p {
+  padding-bottom: 10px;
+}
+.centre {
+  text-align: center;
+}
+a {
+  color: $link_col;
+}
+a:hover {
+  color: $actions_col;
+}
+.vl-wrap {
+  display: grid;
+}
+.vl-page {
+  margin: 0 30px;
+}
+img {
+  max-width: 100%;
+}
+.align-left {
+  float: left;
+  /* max-width: 30%; */
+}
+.align-right {
+  float: right;
+  /* max-width: 30%; */
+}
+figure {
+  padding: 15px;
+}
+figure img {
+  /* display: block; */
+  max-width: 400px;
+}
+figure figcaption {
+  text-align: center;
+  font-style: italic;
+  font-size: 1rem;
+  padding: 5px 0 8px 0;
+}
+footer {
+  text-align: center;
+  background: $header_col;
+  color: $background_col;
+  bottom: 0;
+  width: 100%;
+  line-height: 300px;
+  padding: 90px 0;
+  min-height: 300px;
+}

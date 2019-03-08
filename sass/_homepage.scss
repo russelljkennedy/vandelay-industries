@@ -1,0 +1,82 @@
+// Homepage
+
+// Homepage bg colour
+.home {
+  background: $header_col;
+}
+// Front page hero section
+.hero {
+  background-image: url(../img/01-architect.jpeg);
+  background-size: cover;
+  background-position: center;
+  min-height: 800px;
+  text-align: center;
+  opacity: 0.8;
+}
+h1.hero-title, h2.hero-sub {
+  text-shadow: 1px 4px 1px $header_col;
+}
+h1.hero-title {
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 5.5rem;
+  padding: 100px 0 0 0;
+}
+h2.hero-sub {
+  padding: 0 0 100px 0;
+}
+.hero .btn,
+.hero-slider .btn {
+  background: $header_col;
+  text-decoration: none;
+  padding: 15px;
+}
+.hero .btn:hover,
+.hero-slider .btn:hover {
+  background: $actions_col;
+  color: $header_col;
+}
+/* Front page carousel options */
+.hero-slider {
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+[class*="slider-image-"]{
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  min-height: 800px;
+  width: 100%;
+  text-align: center;
+  opacity: 0.9;
+}
+.slider-image-1 {
+  background-image: url(../img/slider/01-architect.jpeg);
+}
+.slider-image-2 {
+  background-image: url(../img/slider/02-skyline.jpg);
+}
+.slider-image-3 {
+  background-image: url(../img/slider/03-abstract-architecture.jpg);
+}
+.prev, .next {
+  display: block;
+  color: $slider_col;
+  position: absolute;
+  top: 300px;
+  font-size: 8rem;
+  text-align: center;
+  width: 50px;
+  z-index: 50;
+  list-style: none;
+}
+.prev:hover,
+.next:hover {
+  color: $heading_col;
+}
+.prev {
+  left: 50px;
+}
+.next {
+  right: 50px;
+}
