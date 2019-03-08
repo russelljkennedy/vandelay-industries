@@ -17,3 +17,24 @@ $header_col: $colour4;
 $link_col: $colour5;
 $actions_col: $colour6;
 $slider_col: $colour7;
+
+// Rem sizing with pixel fallback (relies on font-size of html reset to 10px)
+// Make sure you pass it a unitless value, e.g. divide by 1px to remove px
+@mixin size($prop, $sizeValue, $sizeValue2: "", $sizeValue3: "", $sizeValue4: "") {
+  @if $sizeValue4 != "" {
+    #{$prop}: ($sizeValue * 1) + px ($sizeValue2 * 1) + px ($sizeValue3 * 1) + px ($sizeValue4 * 1) + px;
+    #{$prop}: ($sizeValue / 10) + rem ($sizeValue2 / 10) + rem ($sizeValue3 / 10) + rem ($sizeValue4 / 10) + rem;
+  }
+  @else if $sizeValue3 != "" {
+    #{$prop}: ($sizeValue * 1) + px ($sizeValue2 * 1) + px ($sizeValue3 * 1) + px;
+    #{$prop}: ($sizeValue / 10) + rem ($sizeValue2 / 10) + rem ($sizeValue3 / 10) + rem;
+  }
+  @else if $sizeValue2 != "" {
+    #{$prop}: ($sizeValue * 1) + px ($sizeValue2 * 1) + px;
+    #{$prop}: ($sizeValue / 10) + rem ($sizeValue2 / 10) + rem;
+  }
+  @else {
+    #{$prop}: ($sizeValue * 1) + px;
+    #{$prop}: ($sizeValue / 10) + rem;
+  }
+}
