@@ -2,16 +2,16 @@ docs_list_title: Site Navigation
 docs:
 
 - title: Home
-  url: /
+  url: {{ site.baseurl }}/
 
 - title: About
-  url: /about.html
+  url: {{ site.baseurl }}/about.html
 
 - title: Sales
-  url: /sales.html
+  url: {{ site.baseurl }}/sales.html
 
 - title: Our Work
-  url: /gallery.html
+  url: {{ site.baseurl }}/gallery.html
 
 - title: Blog
-  url: /blog.html
+  url: {{ site.baseurl }}/blog.html
