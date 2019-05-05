@@ -9,11 +9,11 @@
   <link href="https://fonts.googleapis.com/css?family=Zilla+Slab|Alfa+Slab+One|Karla" rel="stylesheet">
   {% if page.stylesheet %}
     {% for stylesheet in page.stylesheet %}
-      <link rel="stylesheet" href="{{ baseurl }}/{{ stylesheet }}">
+      <link rel="stylesheet" href="{{ site.baseurl }}/{{ stylesheet }}">
     {% endfor %}
   {% endif %}
-  <link rel="stylesheet" href="{{ baseurl }}/css/style.css">
-  <link rel="icon" href="{{ baseurl }}/favicon.ico">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
+  <link rel="icon" href="{{ site.baseurl }}/favicon.ico">
 </head>
   <body{% if page.url == "/" %} class="home"{% endif %}>
       <!-- Wrapper -->
@@ -72,9 +72,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
     {% if page.js %}
       {% for js in page.js %}
-        <script src="{{ baseurl }}/{{ js }}"></script>
+        <script src="{{ site.baseurl }}/{{ js }}"></script>
       {% endfor %}
     {% endif %}
-    <script src="{{ baseurl }}/js/main.js"></script>
+    <script src="{{ site.baseurl }}/js/main.js"></script>
   </body>
 </html>
