@@ -36,11 +36,11 @@
                   <li class="{% if item.url == page.url %}active{% endif %}"><a href="{{ item.url }}">{{ item.title }}</a></li>
                 {% endfor %}
               {% else %}
-                <li class=""><a href="/">Home</a></li>
-                <li class=""><a href="/about.html">About</a></li>
-                <li class=""><a href="/sales.html">Sales</a></li>
-                <li class=""><a href="/gallery.html">Our Work</a></li>
-                <li class="active"><a href="/blog.html">Blog</a></li>
+                <li class=""><a href="{{ site.baseurl }}/">Home</a></li>
+                <li class=""><a href="{{ site.baseurl }}/about.html">About</a></li>
+                <li class=""><a href="{{ site.baseurl }}/sales.html">Sales</a></li>
+                <li class=""><a href="{{ site.baseurl }}/gallery.html">Our Work</a></li>
+                <li class="active"><a href="{{ site.baseurl }}/blog.html">Blog</a></li>
               {% endunless %}
             </ul>
           </div>
@@ -52,11 +52,11 @@
                   <li class="{% if item.url == page.url %}active{% endif %}"><a href="{{ item.url }}">{{ item.title }}</a></li>
                 {% endfor %}
               {% else %}
-                <li class=""><a href="/">Home</a></li>
-                <li class=""><a href="/about.html">About</a></li>
-                <li class=""><a href="/sales.html">Sales</a></li>
-                <li class=""><a href="/gallery.html">Our Work</a></li>
-                <li class="active"><a href="/blog.html">Blog</a></li>
+                <li class=""><a href="{{ site.baseurl }}/">Home</a></li>
+                <li class=""><a href="{{ site.baseurl }}/about.html">About</a></li>
+                <li class=""><a href="{{ site.baseurl }}/sales.html">Sales</a></li>
+                <li class=""><a href="{{ site.baseurl }}/gallery.html">Our Work</a></li>
+                <li class="active"><a href="{{ site.baseurl }}/blog.html">Blog</a></li>
               {% endunless %}
             </ul>
           </div>
