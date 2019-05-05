@@ -34,6 +34,9 @@ nav {
   padding-left: 15px;
   color: $actions_col;
 }
+#logo-container a {
+  text-decoration: none;
+}
 /* Popout nav - invisible at first */
 #nav-container {
   display: none;
