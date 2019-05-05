@@ -21,7 +21,11 @@
         <!-- Main nav -->
         <nav>
           <div id="logo-container">
+            {% if page.url == "/" %}
             <h2>Vandelay Industries</h2>
+            {% else %}
+            <a href="{{ site.baseurl }}"><h2>Vandelay Industries</h2></a>
+            {% endif %}
           </div>
           <!-- Container for popout nav -->
           <div id="nav-container">
