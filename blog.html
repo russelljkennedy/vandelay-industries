@@ -10,9 +10,9 @@ title: Blog
     <div class="blog-grid">
       {% for post in site.posts %}
         <div class="blog-listing">
-          <a href="{{ post.url }}" title="{{ post.title }}">
+          <a href="{{ site.baseurl }}/{{ post.url }}" title="{{ post.title }}">
             <div class="blog-post">
-              <img data-date="{{ post.date }}" class="blog-img" src="{{ post.listing_image }}" alt="{{ post.image_caption }}">
+              <img data-date="{{ post.date }}" class="blog-img" src="{{ site.baseurl }}/{{ post.listing_image }}" alt="{{ post.image_caption }}">
               <div class="blog-caption">
                 <h3>{{ post.title }}</h3>
                 <p class="date"><i class="far fa-calendar-alt"></i> {{ post.date | date: "%d %B %Y" }}</p>

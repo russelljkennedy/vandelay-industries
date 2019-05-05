@@ -15,7 +15,7 @@ js:
         <div class="gallery-images">
           {% for item in site.gallery_item %}
           <div class="gallery-item">
-            <a href="{{ item.image_path }}" class="img-link" title="{{ item.caption }}">
+            <a href="{{ site.baseurl }}/{{ item.image_path }}" class="img-link" title="{{ item.caption }}">
               <span class="gall-text">{{ item.title }}</span>
               <img src="{{ item.image_path }}" alt="{{ item.title }}">
 
