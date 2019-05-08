@@ -45,7 +45,7 @@
                 <li class=""><a href="{{ site.baseurl }}/sales.html">Sales</a></li>
                 <li class=""><a href="{{ site.baseurl }}/gallery.html">Our Work</a></li>
                 <li class="active"><a href="{{ site.baseurl }}/blog.html">Blog</a></li>
-              {% else %}
+              {% else if page.url contains '/form-submit' %}
                 <li class=""><a href="{{ site.baseurl }}/">Home</a></li>
                 <li class=""><a href="{{ site.baseurl }}/about.html">About</a></li>
                 <li class="active"><a href="{{ site.baseurl }}/sales.html">Sales</a></li>
