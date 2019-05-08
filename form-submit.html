@@ -1,15 +1,87 @@
----
-layout: default
-title: Thanks!
----
-<div class="vl-page">
-  <!-- Title container -->
-  <section class="title-container">
-    <h1 class="title">{{ page.title }}</h1>
-  </section>
-  <section class="content">
-    <p>Thank you for your enquiry. We'll get back to you as soon as possible!</p>
-    <p>NB - this is just a test form, so the response didn't really go anywhere.</p>
-  </section>
-
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{ page.title }}</title>
+  <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Zilla+Slab|Alfa+Slab+One|Karla" rel="stylesheet">
+  {% if page.stylesheet %}
+    {% for stylesheet in page.stylesheet %}
+      <link rel="stylesheet" href="{{ site.baseurl }}/{{ stylesheet }}">
+    {% endfor %}
+  {% endif %}
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
+  <link rel="icon" href="{{ site.baseurl }}/favicon.ico">
+</head>
+  <body{% if page.url == "/" %} class="home"{% endif %}>
+      <!-- Wrapper -->
+      <div class="vl-wrap">
+        <!-- Main nav -->
+        <nav>
+          <div id="logo-container">
+            {% if page.url == "/" %}
+            <h2>Vandelay Industries</h2>
+            {% else %}
+            <a href="{{ site.baseurl }}"><h2>Vandelay Industries</h2></a>
+            {% endif %}
+          </div>
+          <!-- Container for popout nav -->
+          <div id="nav-container">
+            <button class="hamburger">&#9776;</button>
+            <button class="cross">&#735;</button>
+          </div>
+          <!-- Popout nav menu -->
+          <div class="pop-menu">
+            <ul>
+                <li class=""><a href="{{ site.baseurl }}/">Home</a></li>
+                <li class=""><a href="{{ site.baseurl }}/about.html">About</a></li>
+                <li class="active"><a href="{{ site.baseurl }}/sales.html">Sales</a></li>
+                <li class=""><a href="{{ site.baseurl }}/gallery.html">Our Work</a></li>
+                <li class=""><a href="{{ site.baseurl }}/blog.html">Blog</a></li>
+            </ul>
+          </div>
+          <!-- Nav links -->
+          <div class="nav-links">
+            <ul>
+              {% unless page.url contains '/blog/' %}
+                {% for item in site.data.nav_links.docs %}
+                  <li class="{% if item.url == page.url %}active{% endif %}"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+                {% endfor %}
+              {% else %}
+                <li class=""><a href="{{ site.baseurl }}/">Home</a></li>
+                <li class=""><a href="{{ site.baseurl }}/about.html">About</a></li>
+                <li class=""><a href="{{ site.baseurl }}/sales.html">Sales</a></li>
+                <li class=""><a href="{{ site.baseurl }}/gallery.html">Our Work</a></li>
+                <li class="active"><a href="{{ site.baseurl }}/blog.html">Blog</a></li>
+              {% endunless %}
+            </ul>
+          </div>
+        </nav>
+        <div class="vl-page">
+          <!-- Title container -->
+          <section class="title-container">
+            <h1 class="title">{{ page.title }}</h1>
+          </section>
+          <section class="content">
+            <p>Thank you for your enquiry. We'll get back to you as soon as possible!</p>
+            <p>NB - this is just a test form, so the response didn't really go anywhere.</p>
+          </section>
+        </div>
+        <!-- Footer -->
+        <footer>
+          <p>&copy; Art Vandelay 2019.</p>
+        </footer>
+      </div>
+      <!-- End of wrapper -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+    {% if page.js %}
+      {% for js in page.js %}
+        <script src="{{ site.baseurl }}/{{ js }}"></script>
+      {% endfor %}
+    {% endif %}
+    <script src="{{ site.baseurl }}/js/main.js"></script>
+  </body>
+</html>

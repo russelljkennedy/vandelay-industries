@@ -35,22 +35,16 @@
           <!-- Popout nav menu -->
           <div class="pop-menu">
             <ul>
-              {% unless page.url contains '/blog/' or '/form-submit' %}
+              {% unless page.url contains '/blog/' %}
                 {% for item in site.data.nav_links.docs %}
                   <li class="{% if item.url == page.url %}active{% endif %}"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
                 {% endfor %}
-              {% else if page.url contains '/blog/' %}
+              {% else %}
                 <li class=""><a href="{{ site.baseurl }}/">Home</a></li>
                 <li class=""><a href="{{ site.baseurl }}/about.html">About</a></li>
                 <li class=""><a href="{{ site.baseurl }}/sales.html">Sales</a></li>
                 <li class=""><a href="{{ site.baseurl }}/gallery.html">Our Work</a></li>
                 <li class="active"><a href="{{ site.baseurl }}/blog.html">Blog</a></li>
-              {% else if page.url contains '/form-submit' %}
-                <li class=""><a href="{{ site.baseurl }}/">Home</a></li>
-                <li class=""><a href="{{ site.baseurl }}/about.html">About</a></li>
-                <li class="active"><a href="{{ site.baseurl }}/sales.html">Sales</a></li>
-                <li class=""><a href="{{ site.baseurl }}/gallery.html">Our Work</a></li>
-                <li class=""><a href="{{ site.baseurl }}/blog.html">Blog</a></li>
               {% endunless %}
             </ul>
           </div>
