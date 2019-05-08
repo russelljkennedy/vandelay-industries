@@ -48,7 +48,9 @@ a:hover {
   display: grid;
 }
 .vl-page {
-  margin: 0 30px;
+  // margin: 30px 0;
+  padding: 20px;
+  background: $page_bg;
 }
 img {
   max-width: 100%;
