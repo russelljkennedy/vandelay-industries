@@ -1,4 +1,11 @@
 // Blog
+.bl-title-container {
+  padding: 20px 0;
+  background: $page_bg;
+}
+.blog {
+  background: $page_bg;
+}
 .blog-grid {
   display: grid;
   grid-gap: 10px;
