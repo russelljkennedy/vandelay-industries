@@ -7,15 +7,10 @@
   <title>{{ page.title }}</title>
   <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Zilla+Slab|Alfa+Slab+One|Karla" rel="stylesheet">
-  {% if page.stylesheet %}
-    {% for stylesheet in page.stylesheet %}
-      <link rel="stylesheet" href="{{ site.baseurl }}/{{ stylesheet }}">
-    {% endfor %}
-  {% endif %}
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
-  <link rel="icon" href="{{ site.baseurl }}/favicon.ico">
+  <link rel="stylesheet" href="/vandelay-industries/css/style.css">
+  <link rel="icon" href="/vandelay-industries/favicon.ico">
 </head>
-  <body{% if page.url == "/" %} class="home"{% endif %}>
+  <body>
       <!-- Wrapper -->
       <div class="vl-wrap">
         <!-- Main nav -->
@@ -24,7 +19,7 @@
             {% if page.url == "/" %}
             <h2>Vandelay Industries</h2>
             {% else %}
-            <a href="{{ site.baseurl }}"><h2>Vandelay Industries</h2></a>
+            <a href="/vandelay-industries"><h2>Vandelay Industries</h2></a>
             {% endif %}
           </div>
           <!-- Container for popout nav -->
@@ -35,27 +30,21 @@
           <!-- Popout nav menu -->
           <div class="pop-menu">
             <ul>
-                <li class=""><a href="{{ site.baseurl }}/">Home</a></li>
-                <li class=""><a href="{{ site.baseurl }}/about.html">About</a></li>
-                <li class="active"><a href="{{ site.baseurl }}/sales.html">Sales</a></li>
-                <li class=""><a href="{{ site.baseurl }}/gallery.html">Our Work</a></li>
-                <li class=""><a href="{{ site.baseurl }}/blog.html">Blog</a></li>
+                <li class=""><a href="/vandelay-industries/">Home</a></li>
+                <li class=""><a href="/vandelay-industries/about.html">About</a></li>
+                <li class="active"><a href="/vandelay-industries/sales.html">Sales</a></li>
+                <li class=""><a href="/vandelay-industries/gallery.html">Our Work</a></li>
+                <li class=""><a href="/vandelay-industries/blog.html">Blog</a></li>
             </ul>
           </div>
           <!-- Nav links -->
           <div class="nav-links">
             <ul>
-              {% unless page.url contains '/blog/' %}
-                {% for item in site.data.nav_links.docs %}
-                  <li class="{% if item.url == page.url %}active{% endif %}"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
-                {% endfor %}
-              {% else %}
-                <li class=""><a href="{{ site.baseurl }}/">Home</a></li>
-                <li class=""><a href="{{ site.baseurl }}/about.html">About</a></li>
-                <li class=""><a href="{{ site.baseurl }}/sales.html">Sales</a></li>
-                <li class=""><a href="{{ site.baseurl }}/gallery.html">Our Work</a></li>
-                <li class="active"><a href="{{ site.baseurl }}/blog.html">Blog</a></li>
-              {% endunless %}
+                <li class=""><a href="/vandelay-industries/">Home</a></li>
+                <li class=""><a href="/vandelay-industries/about.html">About</a></li>
+                <li class="active"><a href="/vandelay-industries/sales.html">Sales</a></li>
+                <li class=""><a href="/vandelay-industries/gallery.html">Our Work</a></li>
+                <li class=""><a href="/vandelay-industries/blog.html">Blog</a></li>
             </ul>
           </div>
         </nav>
@@ -77,11 +66,6 @@
       <!-- End of wrapper -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
-    {% if page.js %}
-      {% for js in page.js %}
-        <script src="{{ site.baseurl }}/{{ js }}"></script>
-      {% endfor %}
-    {% endif %}
-    <script src="{{ site.baseurl }}/js/main.js"></script>
+    <script src="/vandelay-industries/js/main.js"></script>
   </body>
 </html>
