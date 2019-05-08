@@ -35,7 +35,7 @@
           <!-- Popout nav menu -->
           <div class="pop-menu">
             <ul>
-              {% unless page.url contains '/blog/' or '/form-submit/' %}
+              {% unless page.url contains '/blog/' or '/form-submit' %}
                 {% for item in site.data.nav_links.docs %}
                   <li class="{% if item.url == page.url %}active{% endif %}"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
                 {% endfor %}
