@@ -45,7 +45,7 @@ a:hover {
   color: $actions_col;
 }
 .vl-wrap {
-  display: grid;
+  display: block;
 }
 .vl-page {
   padding: 30px;
@@ -82,4 +82,9 @@ footer {
   bottom: 0;
   width: 100%;
   line-height: 300px;
+}
+@supports (display: grid) {
+  .vl-wrap {
+    display: grid;
+  }
 }
