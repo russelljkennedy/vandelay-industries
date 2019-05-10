@@ -1,6 +1,6 @@
 // Layout
 
-/* Navigation */
+// Navigation
 nav {
   text-align: center;
   background: $header_col;
@@ -11,21 +11,23 @@ nav {
   line-height: 80px;
 }
 .nav-links ul {
-  display: grid;
+  display: inline-flex;
   list-style: none;
-  grid-template-columns: repeat(5, 1fr);
   text-align: center;
   padding: 10px 0;
   font-size: 2rem;
-  font-family: $body_font, Roboto, sans-serif;
+  font-family: $body_font, 'Roboto', sans-serif;
 }
 .nav-links ul a {
   text-decoration: none;
 }
+.nav-links li {
+  width: 15vw;
+}
 .nav-links li.active a {
   color: $actions_col;
 }
-/* Logo container */
+// Logo container
 #logo-container {
   display: none;
 }
@@ -37,7 +39,7 @@ nav {
 #logo-container a {
   text-decoration: none;
 }
-/* Popout nav - invisible at first */
+// Popout nav - invisible at first
 #nav-container {
   display: none;
 }
@@ -142,4 +144,19 @@ button.hamburger {
   color: #6c6969;
   margin-bottom: 25px;
   box-shadow: -1px 1px 3px #010101;
+}
+// Display nav links as grid where browser allows
+@supports (display: grid) {
+  .nav-links ul {
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(5, 1fr);
+    text-align: center;
+    padding: 10px 0;
+    font-size: 2rem;
+    font-family: $body_font, 'Roboto', sans-serif;
+  }
+  .nav-links li {
+    width: auto;
+  }
 }

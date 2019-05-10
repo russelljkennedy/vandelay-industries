@@ -1,4 +1,4 @@
-/* Media queries */
+// Media queries
 @media only screen and (max-width:1100px) {
   h1.hero-title {
     font-size: 4.8rem;
@@ -25,17 +25,40 @@
     width: 90%;
     min-width: 150px;
   }
-  /* .align-left, .align-right {
-    max-width: 50%;
-  } */
+  .nav-links li {
+    width: auto;
+    padding: 0 20px;
+  }
+  .blog-listing {
+    width: 46vw;
+    margin: 0.5vw;
+  }
+  @supports (display: grid) {
+    .blog-listing {
+      width: auto;
+      margin: 0;
+    }
+    .nav-links li {
+      width: auto;
+      padding: 0;
+    }
+  }
 }
 @media only screen and (max-width:839px) {
   .blog-post {
     height: auto;
   }
+  .blog-listing {
+    width: 95vw;
+  }
+  @supports (display: grid) {
+    .blog-listing {
+      width: auto;
+    }
+  }
 }
 @media only screen and (max-width:750px) {
-  /* Make the popout nav visible */
+  // Make the popout nav visible
   #nav-container {
     display: block;
   }
@@ -51,9 +74,6 @@
   #logo-container {
     display: block;
   }
-  // .vl-page {
-  //   margin: 0 10px;
-  // }
   h1 {
     font-size: 5rem;
   }
@@ -127,7 +147,7 @@
     padding: 15px 0;
   }
 }
-/* Medium mobile */
+// Medium mobile
 @media only screen and (max-width:375px) {
   [class*="slider-image-"]{
     min-height: 350px;
