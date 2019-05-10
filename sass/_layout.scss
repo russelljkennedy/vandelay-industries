@@ -1,6 +1,6 @@
 // Layout
 
-/* Navigation */
+// Navigation
 nav {
   text-align: center;
   background: $header_col;
@@ -16,7 +16,7 @@ nav {
   text-align: center;
   padding: 10px 0;
   font-size: 2rem;
-  font-family: $body_font, Roboto, sans-serif;
+  font-family: $body_font, 'Roboto', sans-serif;
 }
 .nav-links ul a {
   text-decoration: none;
@@ -27,7 +27,7 @@ nav {
 .nav-links li.active a {
   color: $actions_col;
 }
-/* Logo container */
+// Logo container
 #logo-container {
   display: none;
 }
@@ -39,7 +39,7 @@ nav {
 #logo-container a {
   text-decoration: none;
 }
-/* Popout nav - invisible at first */
+// Popout nav - invisible at first
 #nav-container {
   display: none;
 }
@@ -145,7 +145,7 @@ button.hamburger {
   margin-bottom: 25px;
   box-shadow: -1px 1px 3px #010101;
 }
-
+// Display nav links as grid where browser allows
 @supports (display: grid) {
   .nav-links ul {
     display: grid;
@@ -154,7 +154,7 @@ button.hamburger {
     text-align: center;
     padding: 10px 0;
     font-size: 2rem;
-    font-family: $body_font, Roboto, sans-serif;
+    font-family: $body_font, 'Roboto', sans-serif;
   }
   .nav-links li {
     width: auto;

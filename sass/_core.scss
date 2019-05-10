@@ -1,4 +1,4 @@
-/* Core html elements */
+// Core html elements 
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +8,7 @@
 body {
   background: $background_col;
   color: $foreground_col;
-  font-family: $body_font, Roboto, sans-serif;
+  font-family: $body_font, 'Roboto', sans-serif;
   font-size: 1.5em;
 }
 h1,h2,h3,h4 {
@@ -56,17 +56,14 @@ img {
 }
 .align-left {
   float: left;
-  /* max-width: 30%; */
 }
 .align-right {
   float: right;
-  /* max-width: 30%; */
 }
 figure {
   padding: 15px;
 }
 figure img {
-  /* display: block; */
   max-width: 400px;
 }
 figure figcaption {
@@ -83,6 +80,7 @@ footer {
   width: 100%;
   line-height: 300px;
 }
+// Display page as grid where browser allows
 @supports (display: grid) {
   .vl-wrap {
     display: grid;
