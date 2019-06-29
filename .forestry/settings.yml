@@ -15,6 +15,11 @@ sections:
   label: Gallery item
   create: all
   match: "**/*"
+- type: directory
+  path: blog/_posts/*
+  label: Blog
+  create: all
+  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
