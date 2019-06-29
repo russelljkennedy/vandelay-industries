@@ -1,19 +1,26 @@
 ---
 label: Blog post
 hide_body: false
+display_field: title
 fields:
 - type: text
   name: layout
   label: layout
+  hidden: true
+  default: post
 - type: text
   name: title
-  label: title
+  label: Title
+  description: Add a title
 - type: file
   name: listing_image
-  label: listing_image
+  label: Listing image
+  description: An image for the post on the blog listings page
 - type: text
   name: image_caption
-  label: image_caption
+  label: Caption
+  description: Add a description of the image here to make it more accessible
 - type: text
   name: summary
-  label: summary
+  label: Summary
+  description: A blurb about the blog post. Displayed on the main blog listings page.
