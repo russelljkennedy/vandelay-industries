@@ -24,3 +24,5 @@ fields:
   name: summary
   label: Summary
   description: A blurb about the blog post. Displayed on the main blog listings page.
+pages:
+- blog/_posts/test-cat.md
