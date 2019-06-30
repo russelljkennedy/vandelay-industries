@@ -13,3 +13,5 @@ fields:
   name: caption
   label: Caption
   description: Add a description of the image here to make it more accessible
+pages:
+- _gallery_item/test-dog.md
