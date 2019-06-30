@@ -10,3 +10,5 @@ fields:
   label: layout
   default: default
   hidden: true
+pages:
+- new-page.md
