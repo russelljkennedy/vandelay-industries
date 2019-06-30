@@ -17,7 +17,7 @@ sections:
   label: Blog posts
   create: all
   match: "*"
-upload_dir: uploads
+upload_dir: img
 public_path: "/img"
 front_matter_path: ''
 use_front_matter_path: false
