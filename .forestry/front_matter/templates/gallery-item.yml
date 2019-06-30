@@ -12,6 +12,6 @@ fields:
 - type: text
   name: caption
   label: Caption
-  description: Add a description of the image here to make it more accessible
+  description: Add a description to be displayed under the image in the pop-up window
 pages:
 - _gallery_item/test-dog.md
