@@ -1,7 +1,6 @@
 ---
 layout: default
 title: New page
-published: false
 
 ---
 ## New page h2
