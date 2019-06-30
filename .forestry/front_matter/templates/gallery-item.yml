@@ -1,0 +1,13 @@
+---
+label: Gallery item
+hide_body: true
+fields:
+- type: file
+  name: image_path
+  label: image_path
+- type: text
+  name: title
+  label: title
+- type: text
+  name: caption
+  label: caption
